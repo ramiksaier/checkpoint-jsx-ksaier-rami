@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
+import imag from '../src/imageInSrc.jpg'
+import VideoPlayer from 'react-video-js-player'
+import amour from '../src/amour.mp4'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+<h1 className="title-red">Your name here</h1>
+ <div className="myimg">
+<img src="imageInPublic.jpg" className="imm" alt="image2"/> 
+<img src={imag} height="200px" width="200px" className="imm" alt="image2"/> 
+</div>
+<VideoPlayer
+src={amour } className="video" height="320" width="400"/>
     </div>
   );
-}
-
+  }
 export default App;
